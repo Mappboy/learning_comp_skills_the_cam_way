@@ -1,5 +1,5 @@
 # Lessons
-* Week one - Operating Systems/Linux/Bash
+* Week one - [Operating Systems/Linux/Bash](/week_one_os_nix_bash.md)
 * Week two - Basic Intro to programming
 * Week three - Basic Python
 * Week four - PostgreSQL and other DBs
