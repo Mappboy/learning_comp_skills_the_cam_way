@@ -45,8 +45,8 @@ Do some general perusing of links.
 
 - Install [homebrew](https://brew.sh/)
 - Install [iterm2](https://iterm2.com/)
-- Open up iterm2 and start playing around with https://www.tldp.org/LDP/intro-linux/html/index.html everything up to about section 8 is good.
-- Have a look at https://www.tldp.org/LDP/Bash-Beginners-Guide/html/ play around and write a few simple scripts everything there is good but no need to go into advance stuff
+- Open up iterm2 and start playing around with <https://www.tldp.org/LDP/intro-linux/html/index.html> everything up to about section 8 is good.
+- Have a look at <https://www.tldp.org/LDP/Bash-Beginners-Guide/html/> play around and write a few simple scripts everything there is good but no need to go into advance stuff
 
 # For next week
-- Install python3.7 https://binx.io/blog/2019/04/12/installing-pyenv-on-macos/
+- Install python3.7 <https://binx.io/blog/2019/04/12/installing-pyenv-on-macos/>

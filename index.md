@@ -25,9 +25,9 @@ But seriously you could spend weeks/years on anyone of these topics. In fact you
 
 # Websites
 *These are just general sites that might interest you as you become more involved with tech stuff*
-- https://stackoverflow.com/ (Programmers helping other programmers)
-- https://medium.com/ (It has over stuff but the tech articles are usually quite good)
-- https://dev.to/ (Like medium but more developer stuff)
+- <https://stackoverflow.com/> (Programmers helping other programmers)
+- <https://medium.com/> (It has over stuff but the tech articles are usually quite good)
+- <https://dev.to/> (Like medium but more developer stuff)
 - <https://github.com/sindresorhus/awesome#computer-science> (Resouurces list)
 
 # Sidenote
