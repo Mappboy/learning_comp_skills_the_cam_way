@@ -13,7 +13,8 @@ title: The Course
 * Week seven - Data analysis (Scipy/Numpy/Pandas/Matplotlib)
 * Week eight - GIS (PostGIS/QGIS/Mapbox other online mapping)
 * Week nine - Web frameworks & Rest APIs
-* Week ten - ML/Cryptocurrencies/And other Cool slang
+* Week ten - Frontend tech JS/HTML/CSS 
+* Week eleven - ML/Cryptocurrencies/And other Cool slang
 
 # How this will work
 You (Michael) do as much or as little research into each topic.

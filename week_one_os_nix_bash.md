@@ -27,15 +27,15 @@ Pretty much you could spend years learning this stuff some people do.
 Do some general perusing of links. 
 
 ### What to figure out
-0) How do you computers works (RAM/CPU/GPU/Storage)?
-1) What's is an OS and what are the differences between them `/r/n vs /n`?
-2) *nix systems how do they work?
-3) Why is Linux the best one?
-4) Install homebrew and iterm2 on your Mac
-5) Navigating the command line (cd/pwd/mkdir/rm/touch etc) user+file commands (cat/less/chown/chmod/users/groups/stdin/stdout/redirection)
-6) The cool commands (grep/ps/awk/sed/curl)
-7) Using Vim
-8) Bash scripts and cron
+0. How do you computers works (RAM/CPU/GPU/Storage)?
+1. What's is an OS and what are the differences between them `/r/n vs /n`?
+2. *nix systems how do they work?
+3. Why is Linux the best one?
+4. Install homebrew and iterm2 on your Mac
+5. Navigating the command line (cd/pwd/mkdir/rm/mv/touch etc) user+file commands (cat/less/chown/chmod/users/groups/stdin/stdout/redirection)
+6. The cool commands (grep/ps/awk/sed/curl/find)
+7. Using Vim
+8. Bash scripts and cron
 
 # Practical Section
 *Important side notes: Firstly never copy and paste anything online unless you are 1000%  positive of it's effects. I am not your daddy, if you destroy your computer you fix it.*
@@ -47,6 +47,7 @@ Do some general perusing of links.
 - Install [iterm2](https://iterm2.com/)
 - Open up iterm2 and start playing around with <https://www.tldp.org/LDP/intro-linux/html/index.html> everything up to about section 8 is good.
 - Have a look at <https://www.tldp.org/LDP/Bash-Beginners-Guide/html/> play around and write a few simple scripts everything there is good but no need to go into advance stuff
+- Learn a little bit of Vim <https://openvim.com/> or <https://danielmiessler.com/study/vim/> or <https://medium.com/actualize-network/how-to-learn-vim-a-four-week-plan-cd8b376a9b85>
 
 # For next week
 - Install python3.7 <https://binx.io/blog/2019/04/12/installing-pyenv-on-macos/>
