@@ -26,20 +26,22 @@ Typey-typey is a much more efficient way in the end. Although it won't seem that
 
 ## Intro
 Pretty much you could spend years learning this stuff some people do.
-Do some general perusing of links. 
+Do some general perusing of links.
+
+*All arrays start from 0*
 
 ### What to figure out
 0. How do you computers works (RAM/CPU/GPU/Storage)?
-1. What is an OS and what are the differences between them `/r/n vs /n`?
+1. What is an OS and what are the differences between them, can you tell us about `/r/n vs /n`?
 2. *nix systems how do they work?
-3. Why is Linux the best one?
-4. Install homebrew and iterm2 on your Mac or Windows Subsystem for Linux
+3. Why is Linux the best OS for Development?
+4. Install homebrew and iterm2 on your Mac or if on Windows then Windows Subsystem for Linux
 5. Navigating the command line (cd/pwd/mkdir/rm/mv/touch etc) user+file commands (cat/less/chown/chmod/users/groups/stdin/stdout/redirection)
-6. The cool commands (grep/ps/awk/sed/curl/find)
+6. The cool commands (grep/ps/awk/sed/curl/find), can you tell me any others, what's your favourite ?
 7. Using Vim, can you exit it ?
-8. Bash scripts and cron
+8. Bash scripts and cron, what's that all about ?
 
-# Practical Section
+## Practical Section
 *Important side notes: Firstly never copy and paste anything online unless you are 1000%  positive of it's effects. I am not your daddy, if you destroy your computer you fix it.*
 
 *The most deadly command is `rm -rf /`
@@ -53,5 +55,5 @@ If on Windows:
 - Have a look at <https://www.tldp.org/LDP/Bash-Beginners-Guide/html/> play around and write a few simple scripts everything there is good but no need to go into advance stuff
 - Learn a little bit of Vim <https://openvim.com/> or <https://danielmiessler.com/study/vim/> or <https://medium.com/actualize-network/how-to-learn-vim-a-four-week-plan-cd8b376a9b85>
 
-# For next week
+## For next week
 - Install python3.7 <https://binx.io/blog/2019/04/12/installing-pyenv-on-macos/>
