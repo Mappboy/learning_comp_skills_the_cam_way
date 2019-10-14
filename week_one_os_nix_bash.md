@@ -1,7 +1,7 @@
 ---
 layout: post
 title: OS and Bash
-___
+---
 
 # Operating Systems
 ## Existing Courses
