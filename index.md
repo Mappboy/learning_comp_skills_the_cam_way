@@ -1,3 +1,7 @@
+---
+layout: home
+---
+
 # Lessons
 * Week one - [Operating Systems/Linux/Bash](/week_one_os_nix_bash.md)
 * Week two - Basic Intro to programming
@@ -23,6 +27,7 @@ But seriously you could spend weeks/years on anyone of these topics. In fact you
 - https://stackoverflow.com/ (Programmers helping other programmers)
 - https://medium.com/ (It has over stuff but the tech articles are usually quite good)
 - https://dev.to/ (Like medium but more developer stuff)
+- <https://github.com/sindresorhus/awesome#computer-science> (Resouurces list)
 
 # Sidenote
 _I take zero responsibility for any spelling mistakes in here. I am writing as fast as I can yo, because I have a job that pays me money._
