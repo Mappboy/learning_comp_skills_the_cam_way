@@ -17,7 +17,7 @@ title: The Course
 * Week eleven - ML/Cryptocurrencies/And other Cool slang
 
 # How this will work
-You (Michael) do as much or as little research into each topic.
+You (Michael...You too Kodie) do as much or as little research into each topic.
 
 However there will be a test, I will decide what will be on the test when I decide what is on the test.
 Basically though just LEARN ! 
