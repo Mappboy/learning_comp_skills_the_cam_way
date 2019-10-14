@@ -10,6 +10,8 @@ A general search Google-fu has resulted in the current courses:
 - <https://www.coursera.org/learn/os-power-user?specialization=google-it-support>
 - <https://www.eduonix.com/courses/system-programming/linux-for-absolute-beginners>
 
+_ This is not a complete list or in anyway an endorsement of any of these courses. Probably best to just Google it yourself. Like everything. _
+
 ## Useful links
 - <https://www.tldp.org/guides.html>
 - <https://www.tldp.org/LDP/GNU-Linux-Tools-Summary/html/index.html>
