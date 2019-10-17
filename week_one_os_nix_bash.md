@@ -39,7 +39,7 @@ Do some general perusing of links.
 7. Using Vim, can you exit it ?
 8. Bash scripts and cron
 
-# Practical Section
+## Practical Section
 *Important side notes: Firstly never copy and paste anything online unless you are 1000%  positive of it's effects. I am not your daddy, if you destroy your computer you fix it.*
 
 *The most deadly command is `rm -rf /`
@@ -53,5 +53,9 @@ If on Windows:
 - Have a look at <https://www.tldp.org/LDP/Bash-Beginners-Guide/html/> play around and write a few simple scripts everything there is good but no need to go into advance stuff
 - Learn a little bit of Vim <https://openvim.com/> or <https://danielmiessler.com/study/vim/> or <https://medium.com/actualize-network/how-to-learn-vim-a-four-week-plan-cd8b376a9b85>
 
-# For next week
+## Fun Stuff
+See if you can solve any of these
+<https://unixgame.io/unix50>
+
+## For next week
 - Install python3.7 <https://binx.io/blog/2019/04/12/installing-pyenv-on-macos/>
