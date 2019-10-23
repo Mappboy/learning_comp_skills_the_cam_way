@@ -5,7 +5,7 @@ Cheating is fine by me, it is the easiest way to get the answers of course.
 But points mean nothing so proceed with caution.
 """
 import sys
-from collections import namedtuple
+from collections import namedtuple, Counter
 
 if sys.version_info.major == 2:
     get_input = raw_input
@@ -91,17 +91,20 @@ question = {
                          "Anyway I would use "
                          "`cat fresh_prince.txt |awk '{print length, NR, $0}'|sort -nr | cut -d' ' -f 2 | head -n 1`"},
     "7": {"question": "How long is the line from question 5?",
-          "explanation": "The easiest way would be to use wc -L. However the wc program differs on mac to that on unix."
+          "explanation": "The easiest way would be to use wc -L. However the wc program differs on mac to that on unix. "
                          "Therefore we would use something like "
                          "`cat fresh_prince.txt |awk '{print length, NR, $0}'|sort -nr | cut -d' ' -f 1 | head -n1`",
           "answer": by_line_length[0].length},
     "8": {"question": 'Run the command `echo "echo Hello World" > hw.sh`, how would make this an executable?',
           "answer": "Easy yo, `chmod +x hw.sh`."},
-    "9": {"question": "Can you make the script print out `Hello Michael` with out changing the contents of the file?",
-          "answer": "If you have made the file executable ./hw.sh | sed 's/World/Michael/', "
-                    "if you haven't (sh hw.sh | sed 's/World/Michael/')"},
+    "9": {
+        "question": "Can you make the script print out `Hello Michael` instead, with out changing the contents of the file?",
+        "answer": "If you have made the file executable ./hw.sh | sed 's/World/Michael/', "
+                  "if you haven't (sh hw.sh | sed 's/World/Michael/')"},
     "10": {"question": "Excluding whitespace, what is the most common start of each line in "
                        "the fresh_prince.txt file and how many times does it appear?",
+           "answer": "Most common word {0} is used {1} times".format(
+               *Counter(_.line.split(" ")[0] for _ in lines if _.length).most_common()[0]),
            "explanation": "I used "
                           r"`cut -d ' ' -f 1 fresh_prince.txt | egrep '\w' |  sort -nr |  uniq -c | sort -nr | head -n 1` "
                           "`egrep` is there solely to exclude whitespace, you could use awk or sed though."
