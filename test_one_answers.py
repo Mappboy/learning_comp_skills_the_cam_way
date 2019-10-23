@@ -4,8 +4,8 @@ it will provide you with the answers.
 Cheating is fine by me, it is the easiest way to get the answers of course.
 But points mean nothing so proceed with caution.
 """
-from collections import namedtuple
 import sys
+from collections import namedtuple
 
 if sys.version_info.major == 2:
     get_input = raw_input
@@ -56,7 +56,7 @@ lines = []
 with open(FILE_TO_CONV, "r") as fp:
     for line_no, line in enumerate(fp.readlines()):
         line = line.rstrip("\n")
-        lines.append(Line(line_no+1, line, len(line)))
+        lines.append(Line(line_no + 1, line, len(line)))
 
 by_line_length = sorted([_ for _ in lines], key=lambda l: l.length, reverse=True)
 
@@ -107,8 +107,9 @@ question = {
                           "`egrep` is there solely to exclude whitespace, you could use awk or sed though."
            },
     "11": {"question": "What does it `Secure Shell` mean and how would you go about doing it on a server?",
-           "answer":"Assuming your id_rsa file exists on a server ssh username@ip_address. ",
-            "explanation": "Secure Shell or ssh is a way of logging into a remote server and something we will be using quite a bit"}
+           "answer": "Assuming your id_rsa file exists on a server ssh username@ip_address.",
+           "explanation": "Secure Shell or ssh is a way of logging into a remote server and "
+                          "something we will be using quite a bit"}
 }
 
 for i, values in sorted(question.items(), key=lambda x: int(x[0])):

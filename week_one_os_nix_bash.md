@@ -55,5 +55,8 @@ If on Windows:
 - Have a look at <https://www.tldp.org/LDP/Bash-Beginners-Guide/html/> play around and write a few simple scripts everything there is good but no need to go into advance stuff
 - Learn a little bit of Vim <https://openvim.com/> or <https://danielmiessler.com/study/vim/> or <https://medium.com/actualize-network/how-to-learn-vim-a-four-week-plan-cd8b376a9b85>
 
+## The Test
+- [Test week one](/week_one_test.md)
+
 ## For next week
 - Install python3.7 <https://binx.io/blog/2019/04/12/installing-pyenv-on-macos/>
