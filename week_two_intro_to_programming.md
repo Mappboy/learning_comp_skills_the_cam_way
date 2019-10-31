@@ -12,7 +12,7 @@ A general search Google-fu has resulted in the current courses:
 - <https://www.freecodecamp.org/>
 - <https://www.codecademy.com/>
 
-_ This is not a complete list or in anyway an endorsement of any of these courses. Probably best to just Google it yourself. Like everything. _
+_This is not a complete list or in anyway an endorsement of any of these courses. Probably best to just Google it yourself, like everything else._
 
 ## Useful links
 - <https://en.wikibooks.org/wiki/Introduction_to_Programming>
