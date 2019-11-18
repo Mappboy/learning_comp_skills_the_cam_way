@@ -6,7 +6,7 @@ title: The Course
 # Lessons
 * Week one - [Operating Systems/Linux/Bash](/week_one_os_nix_bash.md)
 * Week two - [Basic Intro to programming](/week_two_intro_to_programming.md)
-* Week three - Basic Python
+* Week three - [More Basic Python and useful packages](/week_three_programming_two.md)
 * Week four - PostgreSQL and other DBs
 * Week five - CVS ( Git/Github/Gitlab)
 * Week six - The C L O U D
