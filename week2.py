@@ -67,6 +67,7 @@ class GuessingGame(object):
     """
     Main class for our simple guessing game
     """
+
     def __init__(self,
                  previous_count: int = 0,
                  name: str = "Idiot",
@@ -144,7 +145,7 @@ class GuessingGame(object):
         """
         # TODO: Insert some extra responses based on guess_count divided by max_guesses
         click.secho(f"{self.name} bloody did it, however it would've only taken {QUESTIONER} {guess_count - 1} "
-              f"to guess correctly", color="green")
+                    f"to guess correctly", color="green")
 
     def losing_message(self):
         """

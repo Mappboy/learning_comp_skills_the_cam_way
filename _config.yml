@@ -1,2 +1,6 @@
 theme: minima
 title: Teaching comp sci skills
+header_pages:
+  - week_one_os_nix_bash.md
+  - week_two_intro_to_programming.md
+  - week_three_programming_cont.md
