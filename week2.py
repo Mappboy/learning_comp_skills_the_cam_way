@@ -1,6 +1,8 @@
 """
 Rewritten number guesser
 See also argparse and sys.argv as a replacement for recieving arguments from CLI.
+NOTE: This isn't the best way of writing this.
+However consider it an introduction to classes, sets, enums, tuples, dicts, command line args.
 """
 import os
 from enum import Enum, auto
@@ -141,8 +143,8 @@ class GuessingGame(object):
         :return: Message for winners
         """
         # TODO: Insert some extra responses based on guess_count divided by max_guesses
-        print(f"{self.name} bloody did it, however it would've only taken {QUESTIONER} {guess_count - 1} "
-              f"to guess correctly")
+        click.secho(f"{self.name} bloody did it, however it would've only taken {QUESTIONER} {guess_count - 1} "
+              f"to guess correctly", color="green")
 
     def losing_message(self):
         """
