@@ -1,9 +1,8 @@
 """
 Rewritten number guesser
-See also argparse as a replacement for package click
+See also argparse and sys.argv as a replacement for recieving arguments from CLI.
 """
 import os
-import sys
 from enum import Enum, auto
 from random import randint, choice
 
@@ -18,6 +17,7 @@ class ResponseType(Enum):
     CURRENT_GUESS_LESS_THAN_ANSWER = auto()
     HIGHER_THAN_ANSWER_REPEAT = auto()
     REPEAT_ANSWER = auto()
+    VICTORY = auto()
 
 
 # Make sure we insult the user any time they are stupid
@@ -29,7 +29,8 @@ SILLY_RESPONSES = {
     ResponseType.REPEAT_ANSWER
 }
 
-MAX_GUESSES = 100
+# Maximum number of guess and range limit user is allowed by default
+MAX_GUESSES = 10
 MAX_NUMBER_RANGE = 100
 QUESTIONER = "Cam"
 INSULTS_ADJS = (
@@ -61,6 +62,9 @@ def get_insult() -> str:
 
 
 class GuessingGame(object):
+    """
+    Main class for our simple guessing game
+    """
     def __init__(self,
                  previous_count: int = 0,
                  name: str = "Idiot",
@@ -81,8 +85,7 @@ class GuessingGame(object):
 
     def get_response_type(self) -> ResponseType:
         """
-        Provides reponse types based on state of game
-        :return:
+        Provides response types based on state of game
         """
         previous_guess_higher_than_ans = self.answer < self.previous_guess if self.previous_guess is not None else False
         previous_guess_lower_than_ans = self.answer > self.previous_guess if self.previous_guess is not None else False
@@ -96,25 +99,30 @@ class GuessingGame(object):
             return ResponseType.REPEAT_ANSWER
         if self.current_guess > self.maximum_number:
             return ResponseType.GREATER_THAN_MAX_NUMBER
-        if current_guess_less_than_answer and current_guess_greater_than_prev and previous_guess_lower_than_ans:
+        if current_guess_less_than_answer and current_guess_less_than_prev and previous_guess_lower_than_ans:
             return ResponseType.LOWER_THAN_ANSWER_REPEAT
-        if current_guess_greater_answer and current_guess_less_than_prev and previous_guess_higher_than_ans:
+        if current_guess_greater_answer and current_guess_greater_than_prev and previous_guess_higher_than_ans:
             return ResponseType.HIGHER_THAN_ANSWER_REPEAT
         if current_guess_less_than_answer:
             return ResponseType.CURRENT_GUESS_GREATER_THAN_ANSWER
         if current_guess_greater_answer:
             return ResponseType.CURRENT_GUESS_LESS_THAN_ANSWER
+        return ResponseType.VICTORY
 
-    def response_generator(self):
+    def response_generator(self) -> str:
+        """
+        Fetch a response type and generate a response based on it
+        """
         prefix_response = f"{self.name}"
         responses = {
             ResponseType.LESS_THAN_ZERO: f"it has to be greater than zero",
             ResponseType.GREATER_THAN_MAX_NUMBER: f"it has to be less than {self.maximum_number}",
-            ResponseType.LOWER_THAN_ANSWER_REPEAT: f"I already told you it was lower than {self.previous_guess}",
-            ResponseType.HIGHER_THAN_ANSWER_REPEAT: f"I already told you it was higher than {self.previous_guess}",
-            ResponseType.CURRENT_GUESS_GREATER_THAN_ANSWER: f"answer is higher than {self.current_guess}",
-            ResponseType.CURRENT_GUESS_LESS_THAN_ANSWER: f"answer is lower than {self.current_guess}",
+            ResponseType.LOWER_THAN_ANSWER_REPEAT: f"I already told you it was higher than {self.previous_guess}",
+            ResponseType.HIGHER_THAN_ANSWER_REPEAT: f"I already told you it was lower than {self.previous_guess}",
+            ResponseType.CURRENT_GUESS_GREATER_THAN_ANSWER: f"higher than {self.current_guess}",
+            ResponseType.CURRENT_GUESS_LESS_THAN_ANSWER: f"lower than {self.current_guess}",
             ResponseType.REPEAT_ANSWER: f"I already told you !!!",
+            ResponseType.VICTORY: ""
         }
         res_type = self.get_response_type()
         if res_type in SILLY_RESPONSES:
@@ -130,40 +138,42 @@ class GuessingGame(object):
     def victory_message(self, guess_count) -> str:
         """
         If a user wins within maximum guesses provide a victory message
-        :param guess_count:
-        :return:
+        :return: Message for winners
         """
-        print(f"You bloody did it, however it only would of taken Cam {guess_count - 1}")
+        # TODO: Insert some extra responses based on guess_count divided by max_guesses
+        print(f"{self.name} bloody did it, however it would've only taken {QUESTIONER} {guess_count - 1} "
+              f"to guess correctly")
 
     def losing_message(self):
         """
         Provide a losing message if they couldn't guess it in time
-        :param name:
-        :param guess_count: Number of guesses
-        :param random_number: Random number
         :return: Message for losers
         """
         return f"OMG {self.name} you had fucking {self.max_guesses} chances and you" \
             f" couldn't pick {self.answer} you {get_insult()}!!!"
 
     def run_game(self):
+        """
+        Main loop for running our game
+        """
         while self.keep_playing:
             if self.previous_count:
                 if self.previous_count < self.max_guesses:
-                    print("You done pretty well last time. Maybe not so lucky this time")
+                    click.secho("You done pretty well last time. Maybe not so lucky this time", color="green")
                 else:
-                    print(f"{get_insult()}")
+                    click.secho(f"Better luck this time you {get_insult()}", color="red")
             for guess_count in range(1, self.max_guesses):
                 self.current_guess = click.prompt(f"Guess a number between 1 and {self.maximum_number}", type=int)
                 response, correct_guess = self.check_answer()
                 if correct_guess:
-                    print(self.victory_message(guess_count))
+                    click.secho(self.victory_message(guess_count), color="green")
                     self.previous_count = guess_count
-                    sys.exit(0)
-                print(self.response_generator())
+                    break
+                click.secho(self.response_generator(), color="red")
                 self.previous_guess = self.current_guess
             self.losing_message()
             self.keep_playing = click.confirm(f"Hey {self.name} you {get_insult()} would you like to keep playing")
+        click.secho(f"Goodbye {self.name} you {get_insult()}")
 
 
 @click.command()
