@@ -4,7 +4,7 @@ See also argparse and sys.argv as a replacement for recieving arguments from CLI
 NOTE: This isn't the best way of writing this.
 However consider it an introduction to classes, sets, enums, tuples, dicts, command line args.
 """
-import os
+from os import environ
 from enum import Enum, auto
 from random import randint, choice
 
@@ -56,11 +56,11 @@ INSULTS_NOUNS = (
 )
 
 
-def get_insult() -> str:
+def get_insult(extra_insult: str = "Fuck") -> str:
     """
     Create an insult for the user
     """
-    return f"{choice(INSULTS_ADJS)} {choice(INSULTS_ADJS)} {choice(INSULTS_NOUNS)}"
+    return f"{extra_insult} {choice(INSULTS_ADJS)} {choice(INSULTS_ADJS)} {choice(INSULTS_NOUNS)}"
 
 
 class GuessingGame(object):
@@ -182,7 +182,7 @@ class GuessingGame(object):
 @click.command()
 @click.option('-g', '--max_guesses', default=MAX_GUESSES, help='Maximum number of guesses user is allowed')
 @click.option('-n', '--name', prompt='Name of guesser',
-              default=lambda: os.environ.get('USER', ''),
+              default=lambda: environ.get('USER', ''),
               required=True,
               help='The person doing the guessing.')
 @click.option('-r', '--random_number',
